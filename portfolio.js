@@ -1,0 +1,321 @@
+// Carousel & Lightbox logic
+const carouselImgs = document.querySelectorAll('.carousel-img');
+const thumbs = document.querySelectorAll('.thumb');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+const lightboxPrev = document.getElementById('lightbox-prev');
+const lightboxNext = document.getElementById('lightbox-next');
+
+// --- NEW: Eye icon overlay logic ---
+const viewOverlay = document.getElementById('carouselViewBtn');
+
+let currentImg = 0;
+
+// Thumbnail click
+thumbs.forEach((thumb, idx) => {
+    thumb.addEventListener('click', () => showImage(idx));
+});
+
+// Carousel click opens lightbox
+carouselImgs.forEach((img, idx) => {
+    img.addEventListener('click', () => openLightbox(idx));
+});
+
+// Eye icon overlay click/keyboard opens lightbox
+if (viewOverlay) {
+    viewOverlay.addEventListener('click', () => openLightbox(currentImg));
+    // Keyboard accessibility (Enter/Space)
+    viewOverlay.addEventListener('keydown', (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            openLightbox(currentImg);
+        }
+    });
+}
+
+// Functions
+function showImage(idx) {
+    carouselImgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+    thumbs.forEach((t, i) => t.classList.toggle('active', i === idx));
+    currentImg = idx;
+}
+function openLightbox(idx) {
+    lightbox.classList.add('open');
+    showLightboxImage(idx);
+    // Focus on close btn for accessibility
+    lightboxClose.focus();
+}
+function showLightboxImage(idx) {
+    lightboxImg.src = carouselImgs[idx].src;
+    currentImg = idx;
+}
+function closeLightbox() {
+    lightbox.classList.remove('open');
+}
+
+// Next/Prev in lightbox
+lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentImg = (currentImg + 1) % carouselImgs.length;
+    showLightboxImage(currentImg);
+});
+lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentImg = (currentImg - 1 + carouselImgs.length) % carouselImgs.length;
+    showLightboxImage(currentImg);
+});
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+// Start with first image active
+showImage(0);
+
+
+// ==== Modal Open/Close Logic ====
+
+// Modal open/close logic
+document.getElementById('cvModalBtn').onclick = function () {
+    document.getElementById('cvModal').classList.add('open');
+};
+document.getElementById('cvModalClose').onclick = function () {
+    document.getElementById('cvModal').classList.remove('open');
+};
+document.getElementById('contactModalBtn').onclick = function () {
+    document.getElementById('contactModal').classList.add('open');
+};
+document.getElementById('contactModalClose').onclick = function () {
+    document.getElementById('contactModal').classList.remove('open');
+};
+// Optional: Close modal on background click
+document.querySelectorAll('.modal').forEach(modal => {
+    modal.onclick = function (e) {
+        if (e.target === modal) modal.classList.remove('open');
+    };
+});
+
+// portfolio carousel
+
+// Carousel functionality
+const track = document.querySelector('.portfolio-carousel-track');
+const cards = document.querySelectorAll('.portfolio-carousel-card');
+const btnLeft = document.querySelector('.carousel-nav.left');
+const btnRight = document.querySelector('.carousel-nav.right');
+let currentScroll = 0;
+
+function scrollCards(direction) {
+    // Find visible width
+    const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(track).gap) || 0;
+    const visibleCards = Math.floor(track.offsetWidth / cardWidth) || 1;
+    // Calculate max scroll
+    const maxScroll = (cards.length - visibleCards) * cardWidth;
+    if (direction === 'left') {
+        currentScroll -= cardWidth;
+        if (currentScroll < 0) currentScroll = 0;
+    } else {
+        currentScroll += cardWidth;
+        if (currentScroll > maxScroll) currentScroll = maxScroll;
+    }
+    track.scrollTo({ left: currentScroll, behavior: 'smooth' });
+}
+
+btnLeft.addEventListener('click', () => scrollCards('left'));
+btnRight.addEventListener('click', () => scrollCards('right'));
+
+
+// CV Modal logic
+document.getElementById('footer-cv-btn').onclick = function () {
+    document.getElementById('cv-modal').style.display = 'flex';
+};
+document.getElementById('cv-modal-close').onclick = function () {
+    document.getElementById('cv-modal').style.display = 'none';
+};
+document.getElementById('cv-modal').onclick = function (e) {
+    if (e.target === this) this.style.display = 'none';
+};
+
+// Contact Modal logic
+document.getElementById('footer-contact-btn').onclick = function () {
+    document.getElementById('contact-modal').style.display = 'flex';
+};
+document.getElementById('contact-modal-close').onclick = function () {
+    document.getElementById('contact-modal').style.display = 'none';
+};
+document.getElementById('contact-modal').onclick = function (e) {
+    if (e.target === this) this.style.display = 'none';
+};
+
+// Optional: Prevent form submit from reloading the page
+document.querySelector('#contact-modal .contact-form').onsubmit = function (e) {
+    e.preventDefault();
+    alert('Message sent! (demo)');
+    document.getElementById('contact-modal').style.display = 'none';
+};
+
+
+
+
+// portfolio mobile
+
+const portfolio = [
+    {
+        title: "myFlix Angular Client",
+        image: "img/p1.png",
+        tags: ["Angular", "Frontend", "SPA", "TypeScript"],
+        link: "angulat-client.html"
+    },
+    {
+        title: "Movie API Backend",
+        image: "img/movieapi.png",
+        tags: ["Node.js", "Backend", "REST", "MongoDB"],
+        link: "movieapi.html"
+    },
+    {
+        title: "Meet App",
+        image: "img/meet1.png",
+        tags: ["React", "Frontend", "Fullstack", "Testing"],
+        link: "meet.html"
+    },
+    {
+        title: "myFlix React Client",
+        image: "img/react.png",
+        tags: ["React", "Frontend", "Movie", "SPA"],
+        link: "myflix-react.html"
+    },
+    {
+        title: "Pokemon App",
+        image: "img/poke2.png",
+        tags: ["JavaScript", "Frontend", "API"],
+        link: "pokemon.html"
+    },
+    {
+        title: "ChatApp",
+        image: "img/chatapp1.jpg",
+        tags: ["React Native", "Mobile", "Firebase", "Expo"],
+        link: "chatapp.html"
+    }
+];
+
+// 1. Unique tags (for slider/autocomplete)
+const allTags = [...new Set(portfolio.flatMap(item => item.tags))];
+
+// DOM
+const tagSlider = document.getElementById('tag-slider');
+const grid = document.getElementById('portfolio-grid');
+const searchBar = document.getElementById('search-bar');
+const autocomplete = document.getElementById('autocomplete');
+
+// State
+let currentTag = "All";
+let currentSearch = "";
+
+// Tag slider render
+function renderTagSlider() {
+    tagSlider.innerHTML = "";
+    const tags = ["All", ...allTags];
+    tags.forEach(tag => {
+        const btn = document.createElement('button');
+        btn.className = 'tag-btn' + (currentTag === tag ? ' active' : '');
+        btn.textContent = tag;
+        btn.onclick = () => {
+            currentTag = tag;
+            currentSearch = "";
+            searchBar.value = "";
+            renderTagSlider();
+            renderGrid();
+        };
+        tagSlider.appendChild(btn);
+    });
+}
+
+// Portfolio grid render
+function renderGrid() {
+    let filtered = portfolio;
+    if (currentTag !== "All") {
+        filtered = filtered.filter(item => item.tags.includes(currentTag));
+    }
+    if (currentSearch) {
+        const s = currentSearch.toLowerCase();
+        filtered = filtered.filter(item =>
+            item.title.toLowerCase().includes(s) ||
+            item.tags.some(t => t.toLowerCase().includes(s))
+        );
+    }
+    grid.innerHTML = filtered.map(item => `
+    <div class="portfolio-card1">
+      <a href="${item.link}"><img src="${item.image}" alt="${item.title}"></a>
+      <div class="portfolio-title">${item.title}</div>
+      <div class="portfolio-tags">
+        ${item.tags.map(tag => `<span class="portfolio-tag">${tag}</span>`).join('')}
+      </div>
+    </div>
+  `).join('') || `<div style="grid-column: 1 / -1; text-align:center; color:#888; margin-top:2rem">No projects found</div>`;
+}
+
+// Autocomplete logic
+searchBar.addEventListener('input', function () {
+    currentSearch = this.value;
+    if (this.value.length > 0) {
+        const matches = allTags.filter(tag =>
+            tag.toLowerCase().includes(this.value.toLowerCase())
+        );
+        if (matches.length) {
+            autocomplete.style.display = 'block';
+            autocomplete.innerHTML = matches.map(tag =>
+                `<div class="auto-tag" style="padding:.7rem;cursor:pointer;">${tag}</div>`
+            ).join('');
+            Array.from(autocomplete.children).forEach((el, idx) => {
+                el.onclick = () => {
+                    searchBar.value = matches[idx];
+                    currentSearch = matches[idx];
+                    autocomplete.style.display = 'none';
+                    renderGrid();
+
+                    // Scroll to portfolio section after short delay (let rendering happen)
+                    setTimeout(() => {
+                        const target = document.getElementById('portfolio-section');
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 50);
+                };
+
+            });
+        } else {
+            autocomplete.style.display = 'none';
+        }
+    } else {
+        autocomplete.style.display = 'none';
+        currentSearch = "";
+    }
+    renderGrid();
+});
+searchBar.addEventListener('focus', function () {
+    if (this.value) searchBar.dispatchEvent(new Event('input'));
+});
+document.body.addEventListener('click', e => {
+    if (!searchBar.contains(e.target) && !autocomplete.contains(e.target)) {
+        autocomplete.style.display = 'none';
+    }
+});
+
+// Init
+renderTagSlider();
+renderGrid();
+
+
+
+// share button 
+document.getElementById('footer-share-btn').onclick = function () {
+    if (navigator.share) {
+        navigator.share({
+            title: document.title,
+            text: "Check out this portfolio!",
+            url: window.location.href
+        });
+    } else {
+        // Fallback for unsupported browsers
+        alert("Sharing is not supported on this browser.");
+    }
+};
+
+

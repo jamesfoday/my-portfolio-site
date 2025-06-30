@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Project - myFlix Angular</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <a href="index.html" class="home-sticky-btn" aria-label="Go to home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+
+    <!-- pfm -->
+    <!-- Top: Search Bar -->
+    <div class="search-bar-container" id="portfolio-sectionh">
+        <input type="text" id="search-bar" placeholder="Search portfolio..." autocomplete="off" />
+        <div id="autocomplete"></div>
+        <button class="footer-sticky-link" id="footer-share-btn">
+            <i class="fas fa-share-alt"></i>
+            <span>Share</span>
+        </button>
+
+    </div>
+
+    <main class="portfolio-main">
+        <div class="portfolio-card">
+            <!-- Carousel with Eye Icon Overlay -->
+            <div class="carousel-container">
+                <!-- Eye icon button overlay for accessibility -->
+                <button class="carousel-view-overlay" id="carouselViewBtn" aria-label="View portfolio images"
+                    tabindex="0">
+                    <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                    <span>View</span>
+                </button>
+                <div class="carousel" id="carousel">
+                    <img src="img/meet1.png" alt="Demo 1" class="carousel-img active" />
+                    <img src="img/meet2.png" alt="Demo 2" class="carousel-img" />
+                    <img src="img/meet3.png" alt="Demo 3" class="carousel-img" />
+                </div>
+                <div class="carousel-thumbs">
+                    <img src="img/meet1.png" data-index="0" class="thumb active" />
+                    <img src="img/meet2.png" data-index="1" class="thumb" />
+                    <img src="img/meet3.png" data-index="2" class="thumb" />
+                </div>
+            </div>
+
+            <!-- Lightbox modal -->
+            <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" tabindex="-1">
+                <span class="lightbox-close" id="lightbox-close" tabindex="0" aria-label="Close">&times;</span>
+                <img id="lightbox-img" src="" alt="Project Preview" />
+                <div class="lightbox-controls">
+                    <span id="lightbox-prev" tabindex="0" aria-label="Previous image"><i
+                            class="fas fa-chevron-left"></i></span>
+                    <span id="lightbox-next" tabindex="0" aria-label="Next image"><i
+                            class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Project Content Section -->
+            <div class="portfolio-content">
+                <h2 class="anton-sc-regular">Meet App</h2>
+                <div class="project-tags">
+                    <h4 class="anton-sc-regular">Tech Stack</h4>
+
+                    <span class="anton-sc-regular">Frontend</span>
+                    <ul class="lexend">
+                        <li>
+                            React (with Vite for fast development/build)
+                        </li>
+                        <li>Progressive Web App (PWA) features
+                        </li>
+
+                    </ul>
+
+                    <span class="anton-sc-regular">Backend</span>
+                    <ul class="lexend">
+                        <li>
+                            Serverless architecture (AWS Lambda functions)
+                        </li>
+                        <li>Google Calendar API integration
+                        </li>
+
+
+                    </ul>
+
+                    <span class="anton-sc-regular">Testing & Methodology</span>
+                    <ul class="lexend">
+                        <li>
+                            Test-Driven Development (TDD)
+                        </li>
+                        <li>Jest and React Testing Library
+                        </li>
+                    </ul>
+
+                    <span class="anton-sc-regular">Visualization</span>
+                    <ul class="lexend">
+                        <li>
+                            Chart libraries for scatterplots and pie charts (e.g., Recharts or similar)
+                        </li>
+                    </ul>
+
+                    <span class="anton-sc-regular">Deployment</span>
+                    <ul class="lexend">
+                        <li>
+                            Vercel (for frontend and serverless functions)
+
+
+                        </li>
+                    </ul>
+
+
+                </div>
+                <h4 class="anton-sc-regular">Description</h4>
+                <p class="project-desc lexend">
+                    Meet is a modern, serverless Progressive Web App (PWA) for discovering and exploring upcoming
+                    events. Built with React and Vite, Meet fetches event data from the Google Calendar API and is fully
+                    optimized for both online and offline use. The app supports installation to home screens (like a
+                    native app) and features interactive data visualizations for event trends.
+                <div class="project-tag">
+                    <!-- <h4 class="anton-sc-regular">Tech Stack</h4> -->
+                    <span>Serverless</span>
+                </div>
+                All backend functionality is handled via AWS Lambda, eliminating the need for
+                traditional server hosting.
+                <div class="project-tag">
+                    <!-- <h4 class="anton-sc-regular">Tech Stack</h4> -->
+                    <span>Offline-Ready</span>
+                </div>
+                Users can browse previously loaded events without a network connection.
+                <div class="project-tag">
+                    <!-- <h4 class="anton-sc-regular">Tech Stack</h4> -->
+                    <span>Cross-Platform</span>
+                </div>
+                Designed as a PWA, Meet works seamlessly across mobile and desktop devices.
+                </p>
+                <h2 class="anton-sc-regular">Features</h2>
+                <ul class="project-features lexend">
+
+                    <li>
+                        <div class="project-tag"><span>Filter Events by City</span></div>Instantly search and filter
+                        upcoming events by city.
+
+                    </li>
+                    <li>
+                        <div class="project-tag"><span>Show/Hide Event Details</span></div>
+                        Expand or collapse event info as needed for a clean browsing experience.
+                    </li>
+                    <li>
+                        <div class="project-tag"><span>Specify Number of Events: </span></div>
+                        Set how many upcoming events you wish to view.
+                    </li>
+                    <li>
+                        <div class="project-tag"><span>Offline Usage</span></div>
+                        Cached events are available even when there’s no internet connection.
+                    </li>
+                    <li>
+                        <div class="project-tag"><span>Add to Home Screen</span></div>
+                        Install Meet as a PWA for native-like usage on your device.
+                    </li>
+
+                </ul>
+
+                <h2 class="anton-sc-regular">Highlights</h2>
+                <ul class="project-features lexend">
+                    <li>
+                        <div class="project-tag"><span>Test-Driven Development</span></div>
+                        Every feature is developed with automated tests first, ensuring reliability and maintainability.
+                    </li>
+
+                    <li>
+                        <div class="project-tag"><span>Serverless & Scalable</span></div>
+                        Meets modern demands for cost-effective, highly scalable cloud apps.
+                    </li>
+
+                    <li>
+                        <div class="project-tag"><span>Modern Frontend Workflow</span></div>
+                        Leveraging Vite and React for lightning-fast performance and DX.
+                    </li>
+
+                    <li>
+                        <div class="project-tag"><span>Truly Offline-First:</span></div>
+                        Robust offline support using caching and local storage.
+                    </li>
+
+                    <li>
+                        <div class="project-tag"><span>Easy Deployment</span></div>
+                        One-click deploys to Vercel with continuous integration.
+                    </li>
+
+                    <li>
+                        <div class="project-tag"><span>Data-Driven UI</span></div>
+                        Built-in charts for actionable insights into event trends.
+                    </li>
+                </ul>
+
+                <h2 class="anton-sc-regular">Responsive Design</h2>
+                <ul class="project-features lexend">
+                    <li>Mobile and desktop views</li>
+
+                </ul>
+            </div>
+
+
+
+        </div>
+
+
+        <!-- Sticky Sidebar -->
+        <aside class="portfolio-sidebar hide-mobile">
+            <div class="sidebar-btns-container">
+                <div class="sticky-btns">
+                    <a href="https://meet-eight-eta.vercel.app/" class="btn demo-btn" target="_blank">
+                        <i class="fas fa-play"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/jamesfoday/meet" class="btn code-btn" target="_blank">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                    <button class="btn cv-btn" id="cvModalBtn">
+                        <i class="fas fa-file-alt"></i> CV
+                    </button>
+                    <button class="btn contact-btn" id="contactModalBtn">
+                        <i class="fas fa-envelope"></i> Contact
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Example: CV Modal (you can style as you like) -->
+        <div class="modal" id="cvModal">
+            <div class="modal-content">
+                <span class="modal-close" id="cvModalClose">&times;</span>
+                <h2>Curriculum Vitae</h2>
+                <iframe src="img/JamesFodayResume.pdf" width="100%" height="700px" style="border:none;">
+                    This browser does not support PDFs. Please <a href="img/JamesFodayResume.pdf">download the PDF</a>.
+                </iframe>
+
+            </div>
+        </div>
+
+        <!-- Example: Contact Modal -->
+        <div class="modal" id="contactModal">
+            <div class="modal-content">
+                <span class="modal-close" id="contactModalClose">&times;</span>
+                <h2>Contact Me</h2>
+                <section id="contact">
+                    <section class="contact-section lexend" id="contact">
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <h2 class="contact-title">
+                                    <span class="contact-title-bold">GET</span>
+                                    <span class="contact-title-dot">●</span>
+                                    <span class="contact-title-plain">IN</span>
+                                    <span class="contact-title-accent">TOUCH</span>
+                                </h2>
+                                <p class="contact-desc">
+                                    Please fill out the form on this section to contact with me. Or call between 9:00
+                                    a.m. and
+                                    8:00 p.m. ET, Monday through Friday
+                                </p>
+                                <ul class="contact-details">
+                                    <li><a href="https://maps.app.goo.gl/438MkeyxzK2X9EAi9" target="_blank"
+                                            aria-label="Address">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </a><strong>Address:</strong> Wiesbaden Germany</li>
+                                    <li><a href="mailto:foday@jamesfoday.com" aria-label="Email"> <i
+                                                class="fas fa-envelope"></i></a><strong>Email:</strong>
+                                        foday@jamesfoday.com
+                                    </li>
+                                    <li><a href="tel:+1234567890" aria-label="Phone">
+                                            <i class="fas fa-phone"></i>
+                                        </a><strong>Phone:</strong> +49 160 924 79881</li>
+                                    <li><a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a><strong>GitHub:</strong> github.com/jamesfoday
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>Linkedin:</strong> @JamesFoday</li>
+
+                                </ul>
+                            </div>
+                            <div class="contact-form-wrapper">
+                                <!-- Mailchimp Form Begins -->
+                                <div id="mc_embed_signup">
+                                    <form
+                                        action="https://paralleladdictionz.us16.list-manage.com/subscribe/post?u=8d5dfcad7451ae12d7a269d93&amp;id=49914c2425&amp;f_id=009c18e1f0"
+                                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                        class="validate contact-form" target="_blank">
+                                        <input type="text" name="FNAME" class="form-input" id="mce-FNAME"
+                                            placeholder="Name">
+                                        <input type="email" name="EMAIL" class="form-input" id="mce-EMAIL"
+                                            placeholder="Email" required>
+                                        <textarea name="MMERGE7" class="form-input" id="mce-MMERGE7"
+                                            placeholder="Message" rows="4"></textarea>
+                                        <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                            class="contact-btn">Send Message</button>
+                                    </form>
+                                </div>
+                                <!-- Mailchimp Form Ends -->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </div>
+
+
+    </main>
+    <!-- portfolio carousel -->
+    <div class="portfolio-carousel-section hide-mobile">
+
+        <h2 class="anton-sc-regular">Portfolio</h2>
+        <div class="portfolio-carousel-container">
+            <button class="carousel-nav left" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <div class="portfolio-carousel-track">
+                <!-- Repeat .portfolio-carousel-card t -->
+
+                <a href="movieapi.html">
+
+                    <div class="portfolio-carousel-card">
+                        <img src="img/movieapi.png" alt="Project 5" />
+                        <div class="portfolio-card-info">
+                            <h3>Movie-API backend</h3>
+                            <span class="anton-sc-regular">Tech-stack</span>
+                            <ul class="inline-list lexend">
+                                <li>Node.js</li>
+                                <li>MongoDB</li>
+                                <li>JWT</li>
+
+
+                            </ul>
+                            <ul class="inline-list lexend">
+                                <li>RESTful</li>
+                                <li>Postman</li>
+                                <li>Heroku</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <!-- portfolio 2 -->
+
+                <a href="angulat-client.html">
+
+                    <div class="portfolio-carousel-card">
+                        <img src="img/p1.png" alt="Project 5" />
+                        <div class="portfolio-card-info">
+                            <h3>myFlix Angular Client</h3>
+                            <span class="anton-sc-regular">Tech-stack</span>
+                            <ul class="inline-list lexend">
+                                <li>Angular</li>
+                                <li>TypeScript</li>
+                                <li>RxJS</li>
+
+
+                            </ul>
+                            <ul class="inline-list lexend">
+                                <li>Angular Material</li>
+                                <li>REST API</li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <!-- portfolio 3 -->
+
+                <a href="chatapp.html">
+
+                    <div class="portfolio-carousel-card">
+                        <img src="img/chatapp1.jpg" alt="Project 5" />
+                        <div class="portfolio-card-info">
+                            <h3>ChatApp</h3>
+                            <span class="anton-sc-regular">Tech-stack</span>
+                            <ul class="inline-list lexend">
+                                <li>React Native</li>
+                                <li>Expo</li>
+                                <li>Firebase</li>
+
+
+                            </ul>
+                            <ul class="inline-list lexend">
+                                <li>Android</li>
+                                <li>iOS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- portfolio 4 -->
+
+                <a href="myflix-react.html">
+
+                    <div class="portfolio-carousel-card">
+                        <img src="img/react.png" alt="Project 5" />
+                        <div class="portfolio-card-info">
+                            <h3>MFlix client React</h3>
+                            <span class="anton-sc-regular">Tech-stack</span>
+                            <ul class="inline-list lexend">
+                                <li>React 19</li>
+                                <li>Parcel</li>
+                                <li>MongoDB</li>
+
+
+                            </ul>
+                            <ul class="inline-list lexend">
+                                <li>Node.js</li>
+                                <li>JWT</li>
+                                <li>Netlify</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+                <!-- portfolio 5 -->
+
+                <a href="pokemon.html">
+
+                    <div class="portfolio-carousel-card">
+                        <img src="img/poke2.png" alt="Project 5" />
+                        <div class="portfolio-card-info">
+                            <h3>Pokemon app</h3>
+                            <span class="anton-sc-regular">Tech-stack</span>
+                            <ul class="inline-list lexend">
+                                <li>HTML5</li>
+                                <li>JavaScript</li>
+                                <li>Promise</li>
+
+
+                            </ul>
+                            <ul class="inline-list lexend">
+                                <li>Fetch Polyfill</li>
+                                <li>PokéAPI</li>
+                                <li>ESLint</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <button class="carousel-nav right" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- pfm -->
+
+    <div class="portfolio-mobile " id="portfolio-section">
+        <h2 class="anton-sc-regular pfm-header">Portfolio</h2>
+        <!-- Tag Slider -->
+        <div class="tag-slider" id="tag-slider">
+            <!-- JS fills in tags here -->
+        </div>
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid1" id="portfolio-grid">
+            <!-- JS fills in items here -->
+        </div>
+    </div>
+    <!-- footer menu -->
+    <footer class="footer-sticky-menu lexend ">
+
+        <a href="https://meet-eight-eta.vercel.app/" class="footer-sticky-link" target="_blank">
+            <i class="fas fa-play"></i>
+            <span>Live Demo</span>
+        </a>
+        <a href="https://github.com/jamesfoday/meet" class="footer-sticky-link" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>Source</span>
+        </a>
+        <button class="footer-sticky-link" id="footer-cv-btn">
+            <i class="fas fa-file-alt"></i>
+            <span>CV</span>
+        </button>
+        <button class="footer-sticky-link" id="footer-contact-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </button>
+        <a href="index.html" class="footer-sticky-link">
+            <i class="fas fa-home"></i>
+            <span>home</span>
+        </a>
+        <!-- <button class="footer-sticky-link" id="footer-home-btn">
+            <i class="fas fa-briefcase"></i>
+            <span>Portfolio</span>
+        </button> -->
+    </footer>
+
+    <!-- CV Modal -->
+    <div id="cv-modal" class="footer-modal">
+        <div class="footer-modal-content-cv">
+            <button class="footer-modal-close" id="cv-modal-close">&times;</button>
+            <h2>My CV</h2>
+            <iframe src="img/JamesFodayResumemb.pdf" width="100%" height="100vh" style="border:none;"></iframe>
+            <a href="img/JamesFodayResumemb.pdf" download class="cv-download-btn">Download PDF</a>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="footer-modal">
+        <div class="footer-modal-content">
+            <button class="footer-modal-close" id="contact-modal-close">&times;</button>
+            <section id="contact">
+                <section id="contact">
+                    <section class="contact-section lexend" id="contact">
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <h2 class="contact-title">
+                                    <span class="contact-title-bold">GET</span>
+                                    <span class="contact-title-dot">●</span>
+                                    <span class="contact-title-plain">IN</span>
+                                    <span class="contact-title-accent">TOUCH</span>
+                                </h2>
+                                <p class="contact-desc">
+                                    Please fill out the form on this section to contact with me. Or call between 9:00
+                                    a.m. and
+                                    8:00 p.m. ET, Monday through Friday
+                                </p>
+                                <ul class="contact-details">
+                                    <li><a href="https://maps.app.goo.gl/438MkeyxzK2X9EAi9" target="_blank"
+                                            aria-label="Address">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </a><strong>Address:</strong> Wiesbaden Germany</li>
+                                    <li><a href="mailto:foday@jamesfoday.com" aria-label="Email"> <i
+                                                class="fas fa-envelope"></i></a><strong>Email:</strong>
+                                        foday@jamesfoday.com
+                                    </li>
+                                    <li><a href="tel:+1234567890" aria-label="Phone">
+                                            <i class="fas fa-phone"></i>
+                                        </a><strong>Phone:</strong> +49 160 924 79881</li>
+                                    <li><a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a><strong>GitHub:</strong> github.com/jamesfoday
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>Linkedin:</strong> @JamesFoday</li>
+
+                                </ul>
+                            </div>
+                            <div class="contact-form-wrapper">
+                                <!-- Mailchimp Form Begins -->
+                                <div id="mc_embed_signup">
+                                    <form
+                                        action="https://paralleladdictionz.us16.list-manage.com/subscribe/post?u=8d5dfcad7451ae12d7a269d93&amp;id=49914c2425&amp;f_id=009c18e1f0"
+                                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                        class="validate contact-form" target="_blank">
+                                        <input type="text" name="FNAME" class="form-input" id="mce-FNAME"
+                                            placeholder="Name">
+                                        <input type="email" name="EMAIL" class="form-input" id="mce-EMAIL"
+                                            placeholder="Email" required>
+                                        <textarea name="MMERGE7" class="form-input" id="mce-MMERGE7"
+                                            placeholder="Message" rows="4"></textarea>
+                                        <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                            class="contact-btn">Send Message</button>
+                                    </form>
+                                </div>
+                                <!-- Mailchimp Form Ends -->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+        </div>
+    </div>
+    <!-- footer desktop -->
+
+
+    <div class="bottom-foot hide-mobile">
+        <div class="footer-content">
+            <div class="footer-brand">James Foday</div>
+            <div class="footer-socials">
+                <a href="https://github.com/jamesfoday"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/james-foday-a06083179/"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; COPYRIGHT 2024 BY JamesFoday
+            </div>
+        </div>
+    </div>
+
+
+    <script src="portfolio.js"></script>
+</body>
+
+</html>

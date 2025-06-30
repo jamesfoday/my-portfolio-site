@@ -7,9 +7,15 @@
     <title>James Foday | Web & Mobile App Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
 
 </head>
@@ -27,7 +33,7 @@
         <nav class="desktop-nav">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#portfolio1" class="nav-link">Portfolio</a>
             <a href="#contact" class="nav-link">Contact</a>
         </nav>
 
@@ -35,7 +41,7 @@
     </header>
     <main>
 
-        <section id="home" class="hero">
+        <section id="home " class="hero hide-mobile">
             <div class="hero-content">
                 <h1>
                     <span>James</span> <span>Foday</span>
@@ -50,153 +56,609 @@
         </section>
         <section class="hide-mobile" id="about">
             <section class="about-section" id="about">
-                <div class="about-container">
-                    <div class="about-image">
-                        <img src="img/jamesfoday.jpg" alt="James Foday portrait">
-                    </div>
-                    <div class="about-content">
-                        <h2>ABOUT <span class="accent">ME</span></h2>
-                        <p>
-                            Hello! I'm James Foday. I'm a web developer, and I'm very passionate and dedicated to my
-                            work. With [X] years of experience as a professional web developer, I have acquired the
-                            skills and knowledge necessary to make your project a success. I enjoy every step of the
-                            design process, from discussion and collaboration.
-                        </p>
-                        <div class="about-skills">
-                            <div>
-                                <span>&raquo;</span> <b>Web Development</b>
-                            </div>
-                            <div>
-                                <span>&raquo;</span> <b>Social Media Marketing</b>
-                            </div>
-                            <div>
-                                <span>&raquo;</span> <b>Search Engine Optimization</b>
-                            </div>
-                            <div>
-                                <span>&raquo;</span> <b>Content Generation</b>
-                            </div>
+
+                <section class="about-skills-section">
+                    <div class="about-left lexend">
+                        <div class="profile-pic-wrap">
+                            <img src="img/homepic .png" alt="James Foday" class="profile-pic" />
                         </div>
-                        <a class="about-btn" href="docs/JamesFoday-CV.pdf" download>Download CV</a>
+                        <h2>Skills</h2>
+                        <div class="skills-tabs lexend">
+                            <button class="tab-btn active" data-tab="frontend">Front-end</button>
+                            <button class="tab-btn" data-tab="backend">Back-end</button>
+                            <button class="tab-btn" data-tab="database">Database</button>
+                            <button class="tab-btn" data-tab="version">Version Control</button>
+                            <button class="tab-btn" data-tab="devops">DevOps/Deploy</button>
+                            <button class="tab-btn" data-tab="testing">Testing</button>
+                            <button class="tab-btn" data-tab="softskills">Soft Skills</button>
+                            <button class="tab-btn" data-tab="bonus">Bonus</button>
+
+                        </div>
+                        <div class="line lexend"></div>
+                        <button id="cv-modal-btn" class="cv-btn"> view my CV</button>
+
                     </div>
-                </div>
+                    <div class="about-right lexend">
+                        <h2><span>ABOUT</span> <span class="accent">ME</span></h2>
+                        <p class="about-summary">
+                            Enthusiastic and resourceful Full Stack Developer with over three years of freelance
+                            experience delivering
+                            web and mobile solutions for diverse clients. Recently graduated from the CareerFoundry Full
+                            Stack Web Development
+                            Bootcamp, with strong foundations in both front-end and back-end technologies. Adept at
+                            working independently or as
+                            part of a team, leveraging self-directed learning, online courses, and hands-on projects to
+                            continuously build
+                            technical expertise. Previously worked in digital marketing, bringing a unique blend of
+                            coding skills and business
+                            insight to every project.
+                        </p>
+                        <div class="tab-content active" id="frontend">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Always visible rows -->
+                                    <tr>
+                                        <td>Front-end</td>
+                                        <td>HTML5, CSS3, JavaScript (ES6+)</td>
+                                        <td>Core web tech, semantic, modern JS</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Front-end</td>
+                                        <td>React.js</td>
+                                        <td>Most in-demand framework</td>
+                                        <td><span class="strength-bar" style="--strength:92%">92%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Front-end</td>
+                                        <td>Responsive Design</td>
+                                        <td>Flexbox, Grid, Media Queries</td>
+                                        <td><span class="strength-bar" style="--strength:99%">99%</span></td>
+                                    </tr>
+                                    <!-- Hidden extra rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>Front-end</td>
+                                        <td>TypeScript</td>
+                                        <td>Type-safe JavaScript</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Front-end</td>
+                                        <td>Redux</td>
+                                        <td>State management</td>
+                                        <td><span class="strength-bar" style="--strength:90%">90%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Front-end</td>
+                                        <td>Next.js</td>
+                                        <td>SSR, SSG, React framework</td>
+                                        <td><span class="strength-bar" style="--strength:85%">85%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Front-end</td>
+                                        <td>Vue.js</td>
+                                        <td>Progressive JavaScript framework</td>
+                                        <td><span class="strength-bar" style="--strength:85%">85%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Front-end</td>
+                                        <td>Flutter</td>
+                                        <td>Cross-platform UI (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:65%">65%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="frontend-table-toggle">View More</button>
+                        </div>
+                        <!-- front-end (end) -->
+                        <!-- back-end  -->
+                        <div class="tab-content" id="backend">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Back-end</td>
+                                        <td>Node.js, Express</td>
+                                        <td>API/server, RESTful, modern JS</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back-end</td>
+                                        <td>MongoDB, Mongoose</td>
+                                        <td>NoSQL database with Node</td>
+                                        <td><span class="strength-bar" style="--strength:80%">80%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back-end</td>
+                                        <td>JWT, Auth</td>
+                                        <td>Authentication, Security</td>
+                                        <td><span class="strength-bar" style="--strength:97%">97%</span></td>
+                                    </tr>
+                                    <!-- Hidden rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>Back-end</td>
+                                        <td>Python (Django, Flask)</td>
+                                        <td>Modern Python web API</td>
+                                        <td><span class="strength-bar" style="--strength:90%">90%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Back-end</td>
+                                        <td>PHP (Laravel)</td>
+                                        <td>Popular PHP framework (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:85%">85%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Back-end</td>
+                                        <td>Ruby on Rails</td>
+                                        <td>Productive Ruby web framework (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:70%">70%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Back-end</td>
+                                        <td>GraphQL</td>
+                                        <td>API query language (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:81%">81%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="backend-table-toggle">View More</button>
+                        </div>
+
+                        <!-- back-end (end) -->
+
+                        <!-- database -->
+                        <div class="tab-content" id="database">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Database</td>
+                                        <td>MongoDB, Mongoose</td>
+                                        <td>NoSQL, documents</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Database</td>
+                                        <td>PostgreSQL, MySQL</td>
+                                        <td>SQL, Relational DB</td>
+                                        <td><span class="strength-bar" style="--strength:87%">87%</span></td>
+                                    </tr>
+                                    <!-- Hidden rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>Database</td>
+                                        <td>Firebase Firestore</td>
+                                        <td>Realtime NoSQL DB (React Native)</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Database</td>
+                                        <td>SQLite</td>
+                                        <td>Mobile local DB</td>
+                                        <td><span class="strength-bar" style="--strength:85%">85%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="database-table-toggle">View More</button>
+                        </div>
+                        <!-- database -->
+
+                        <!-- version control  -->
+
+                        <div class="tab-content" id="version">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Version Control</td>
+                                        <td>Git, GitHub</td>
+                                        <td>Standard, collaboration</td>
+                                        <td><span class="strength-bar" style="--strength:98%">98%</span></td>
+                                    </tr>
+                                    <!-- Hidden rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>Version Control</td>
+                                        <td>Bitbucket</td>
+                                        <td>Alternative Git platform (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:45%">45%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="version-table-toggle">View More</button>
+                        </div>
+                        <!-- version control  -->
+
+                        <div class="tab-content" id="devops">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>DevOps/Deploy</td>
+                                        <td>Netlify, Vercel</td>
+                                        <td>Modern static deploy</td>
+                                        <td><span class="strength-bar" style="--strength:85%">85%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DevOps/Deploy</td>
+                                        <td>Heroku</td>
+                                        <td>Easy backend deployment</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <!-- Hidden rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>DevOps/Deploy</td>
+                                        <td>Docker</td>
+                                        <td>Containers (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:30%">30%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>DevOps/Deploy</td>
+                                        <td>Azure, GCP</td>
+                                        <td>Cloud deployment (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:65%">65%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="devops-table-toggle">View More</button>
+                        </div>
+                        <!-- devs -->
+                        <div class="tab-content" id="testing">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Testing</td>
+                                        <td>Jest</td>
+                                        <td>Unit & integration testing</td>
+                                        <td><span class="strength-bar" style="--strength:91%">91%</span></td>
+                                    </tr>
+                                    <!-- Hidden rows -->
+                                    <tr class="extra-row hidden">
+                                        <td>Testing</td>
+                                        <td>Mocha/Chai</td>
+                                        <td>Node.js testing (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:95%">95%</span></td>
+                                    </tr>
+                                    <tr class="extra-row hidden">
+                                        <td>Testing</td>
+                                        <td>Cypress</td>
+                                        <td>End-to-end browser tests (few knowledge)</td>
+                                        <td><span class="strength-bar" style="--strength:50%">50%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="table-accordion-btn" id="testing-table-toggle">View More</button>
+                        </div>
+                        <!-- testing -->
+
+                        <div class="tab-content" id="softskills">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Soft Skills</td>
+                                        <td>Communication</td>
+                                        <td>Remote/team/clients</td>
+                                        <td><span class="strength-bar" style="--strength:99%">99%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soft Skills</td>
+                                        <td>Time Management</td>
+                                        <td>Project delivery, deadlines</td>
+                                        <td><span class="strength-bar" style="--strength:99%">99%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Soft Skills</td>
+                                        <td>Problem Solving</td>
+                                        <td>Troubleshooting/debugging</td>
+                                        <td><span class="strength-bar" style="--strength:99%">99%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- bonus -->
+                        <div class="tab-content" id="bonus">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bonus</td>
+                                        <td>Figma</td>
+                                        <td>UI/UX prototyping</td>
+                                        <td><span class="strength-bar" style="--strength:99%">90%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bonus</td>
+                                        <td>Premiere pro</td>
+                                        <td>Video editing/production</td>
+                                        <td><span class="strength-bar" style="--strength:99%">90%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bonus</td>
+                                        <td>Webpack</td>
+                                        <td>Bundler </td>
+                                        <td><span class="strength-bar" style="--strength:90%">80%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- softzkills -->
+
+                        <!-- <div class="tab-content" id="bonus">
+                            <table class="skills-table">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Skills / Technologies</th>
+                                        <th>Details / Notes</th>
+                                        <th>Strength</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Bonus</td>
+                                        <td>Figma</td>
+                                        <td>UI/UX prototyping</td>
+                                        <td><span class="strength-bar" style="--strength:60%">60%</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bonus</td>
+                                        <td>Webpack</td>
+                                        <td>Bundler </td>
+                                        <td><span class="strength-bar" style="--strength:90%">90%</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> -->
+                        <!-- bonus -->
+
+
+
+
+                    </div>
+
+                </section>
+
             </section>
 
         </section>
         <section class="hide-mobile" id="portfolio">
-            <section class="portfolio-section" id="portfolio">
-                <h2 class="portfolio-title">Portfolio</h2>
+            <section class="portfolio-section" id="portfolio1">
+                <h2 class="anton-sc-regular">Portfolio</h2>
                 <div class="portfolio-grid">
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="X-direct Mobile App" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Mobile App Design</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="angulat-client.html" class="portfolio-title-main">
+                            <img src="img/p1.png" alt="X-direct Mobile App" />
                         </a>
+
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">myFlix Angular Client</span>
+                            <a href="angulat-client.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>Angular</li>
+                                    <li>TypeScript</li>
+                                    <li>RxJS</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>Angular Material</li>
+                                    <li>REST API</li>
+
+
+                                </ul>
+                            </a>
+                        </div>
+
                     </div>
+                    <!-- Portfolio Item 2 -->
 
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="Project 2" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">UI/UX Design</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="movieapi.html" class="portfolio-title-main">
+                            <img src="img/movieapi.png" alt="X-direct Mobile App" />
                         </a>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">Movie-API backend</span>
+                            <a href="movieapi.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>Node.js</li>
+                                    <li>MongoDB</li>
+                                    <li>JWT</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>RESTful</li>
+                                    <li>Postman</li>
+                                    <li>Heroku</li>
+
+                                </ul>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Portfolio Item 3 -->
+
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="Project 3" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Web App</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="meet.html" class="portfolio-title-main">
+                            <img src="img/meet1.png" alt="X-direct Mobile App" />
                         </a>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">Meet App</span>
+                            <a href="meet.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>Frontend</li>
+                                    <li>Backend</li>
+                                    <li>Testing</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>Visualization</li>
+                                    <li>Deployment</li>
+
+                                </ul>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Portfolio Item 4 -->
+
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="Project 4" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Landing Page</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="myflix-react.html" class="portfolio-title-main">
+                            <img src="img/react.png" alt="X-direct Mobile App" />
                         </a>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">MyFlix client React</span>
+                            <a href="myflix-react.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>React 19</li>
+                                    <li>Parcel</li>
+                                    <li>MongoDB</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>Node.js</li>
+                                    <li>JWT</li>
+                                    <li>Netlify</li>
+
+                                </ul>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Portfolio Item 5 -->
+
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="Project 5" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Branding</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="pokemon.html" class="portfolio-title-main">
+                            <img src="img/poke2.png" alt="X-direct Mobile App" />
                         </a>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">Pokemon app</span>
+                            <a href="pokemon.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>HTML5</li>
+                                    <li>JavaScript</li>
+                                    <li>Promise</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>Fetch Polyfill</li>
+                                    <li>PokéAPI</li>
+                                    <li>ESLint</li>
+
+                                </ul>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Portfolio Item 6 -->
+
                     <div class="portfolio-card">
-                        <img src="img/jamesfoday.jpg" alt="Project 6" />
-                        <div class="portfolio-info">
-                            <span class="portfolio-category">Branding</span>
-                            <a href="#" class="portfolio-title-main">
-                                <span>X-direct Mobile</span>
-                            </a>
-
-                        </div>
-                        <a href="#" class="portfolio-link">
-                            <svg width="48" height="48" fill="none" stroke="#FF6600" stroke-width="3"
-                                viewBox="0 0 48 48">
-                                <path d="M15 33 L33 15" />
-                                <path d="M18 15 H33 V30" />
-                            </svg>
+                        <a href="chatapp.html" class="portfolio-title-main">
+                            <img src="img/chatapp1.jpg" alt="X-direct Mobile App" />
                         </a>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category anton-sc-regular">Chtaapp</span>
+                            <a href="chatapp.html" class="lexend">
+                                <span class="anton-sc-regular">Tech-stack</span>
+                                <ul class="inline-list lexend">
+                                    <li>React Native</li>
+                                    <li>Expo</li>
+                                    <li>Firebase</li>
+
+
+                                </ul>
+                                <ul class="inline-list lexend">
+                                    <li>Android</li>
+                                    <li>iOS</li>
+                                </ul>
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </section>
 
         </section>
 
+
+        <!-- ctd -->
         <section class="hide-mobile" id="contact">
-            <section class="contact-section" id="contact">
+            <section class="contact-section lexend" id="contact">
                 <div class="contact-container">
                     <div class="contact-info">
                         <h2 class="contact-title">
@@ -210,14 +672,25 @@
                             8:00 p.m. ET, Monday through Friday
                         </p>
                         <ul class="contact-details">
-                            <li><span class="icon">{svg-location}</span><strong>Address:</strong> Brook 103, New York,
-                                USA</li>
-                            <li><span class="icon">{svg-email}</span><strong>Email:</strong> example@gmail.com</li>
-                            <li><span class="icon">{svg-phone}</span><strong>Phone:</strong> +77 033 442 55 57</li>
-                            <li><span class="icon">{svg-website}</span><strong>Website:</strong> www.myaddress.com</li>
-                            <li><span class="icon">{svg-twitter}</span><strong>Twitter:</strong> @twitternickname</li>
-                            <li><span class="icon">{svg-facebook}</span><strong>Facebook:</strong> @facebooknickname
+                            <li><a href="https://maps.app.goo.gl/438MkeyxzK2X9EAi9" target="_blank"
+                                    aria-label="Address">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a><strong>Address:</strong> Wiesbaden Germany</li>
+                            <li><a href="mailto:foday@jamesfoday.com" aria-label="Email"> <i
+                                        class="fas fa-envelope"></i></a><strong>Email:</strong> foday@jamesfoday.com
                             </li>
+                            <li><a href="tel:+1234567890" aria-label="Phone">
+                                    <i class="fas fa-phone"></i>
+                                </a><strong>Phone:</strong> +49 160 924 79881</li>
+                            <li><a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a><strong>GitHub:</strong> github.com/jamesfoday
+                            </li>
+                            <li><a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                                    aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>Linkedin:</strong> @JamesFoday</li>
+
                         </ul>
                     </div>
                     <div class="contact-form-wrapper">
@@ -240,21 +713,990 @@
                     </div>
                 </div>
             </section>
-
         </section>
+        <!-- pfm -->
+        <!-- Top: Search Bar -->
+        <div id="homem"></div>
+        <div class="search-bar-container" id="portfolio-sectionh">
+            <input type="text" id="search-bar" placeholder="Search portfolio..." autocomplete="off" />
+            <div id="autocomplete"></div>
+
+            <button class="footer-link" id="footer-share-btn">
+                <i class="fas fa-share-alt"></i>
+                <span>Share</span>
+            </button>
+        </div>
+
+        <div class="about-mobile" id="aboutm">
+
+            <div class="jmf-mobile-profile">
+                <!-- About Card -->
+                <section class="jmf-about-card">
+                    <div class="jmf-abt-txt">
+                        <div class="jmf-profile-pic-wrap"> <img src="img/homepic .png" alt="James Foday"
+                                class="jmf-profile-pic" /> </div>
+                        <h2 class="jmf-about-title anton-sc-regular">ABOUT <span class="jmf-highlight">ME</span> <br>
+                            <div class="jmf-name">James Foday</div>
+                            <div class="jmf-role lexend">Web & Mobile App Developer</div>
+                        </h2>
+
+
+                    </div>
+
+                    <p class="jmf-about-desc lexend">
+                        Enthusiastic and resourceful Full Stack Developer with over three years of freelance experience
+                        delivering web and mobile solutions for diverse clients. Recently graduated from the
+                        CareerFoundry
+                        Full Stack Web Development Bootcamp, with strong foundations in both front-end and back-end
+                        technologies. Adept at working independently or as part of a team, leveraging self-directed
+                        learning, online courses, and hands-on projects to continuously build technical expertise.
+                        Previously worked in digital marketing, bringing a unique blend of coding skills and business
+                        insight to every project.
+                    </p>
+                    <!-- Popup Trigger Button -->
+                    <button class="my-popup-btn" id="my-popup-btn">view my CV</button>
+
+                    <!-- Popup Modal -->
+                    <div class="my-popup-modal" id="my-popup-modal">
+                        <div class="my-popup-modal-content">
+                            <button class="my-popup-modal-close" id="my-popup-modal-close">&times;</button>
+                            <h2>My CV</h2>
+                            <iframe src="img/JamesFodayResume.pdf" width="100%" height="280px" style="border:none;">
+                                This browser does not support PDFs. Please <a href="img/JamesFodayResume.pdf">download
+                                    the PDF</a>.
+                            </iframe>
+
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Skills Tabs Card -->
+
+                <section class="jmf-skills-card">
+                    <div class="jmf-skills-header">
+                        <span class="jmf-skills-title an">skills</span>
+                        <span class="jmf-skills-tip">
+                            <i class="fas fa-info-circle"></i> click on skill to see more details
+                        </span>
+                    </div>
+                    <div class="jmf-skills-tabs">
+                        <button class="jmf-tab-btn jmf-tab-active" data-jmf-tab="Front-end">Front-end</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="Back-end">Back-end</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="Database">Database</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="Versions1">Versions</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="DevOps/Deploy">DevOps/Deploy</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="Testing">Testing</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="totd">Softskill</button>
+                        <button class="jmf-tab-btn" data-jmf-tab="Bonus2">Bonus</button>
+                    </div>
+                    <div class="jmf-tab-content" id="jmf-tab-content">
+
+                        <!-- Front-end Tab Content -->
+                        <div class="jmf-tab-panel" id="Front-end-panel">
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Frontend</h4>
+                                    <ul class="lexend">
+                                        <li>HTML5, CSS3, JavaScript (ES6+)</li>
+
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Core web tech, modern JS, most in-demand framework
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Frontend</h4>
+                                    <ul class="lexend">
+                                        <li>React.js</li>
+
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Most in-demand framework
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:92%">92%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Responsive Design</li>
+
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Flexbox, Grid, Media Queries
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:99%">99%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 1 -->
+
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>TypeScript</li>
+
+                                            </ul>
+
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Type-safe JavaScript
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:95%">95%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Redux</li>
+
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    State management
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:90%">90%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Next.js(ES6+)</li>
+
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    SSR, SSG, React framework
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:85%">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Vue.js</li>
+
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Progressive JavaScript framework
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:85%">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 6 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Flutter</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Cross-platform UI (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:95%">65%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- accordion content end -->
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
+
+                            </div>
+                            <!-- accordion end -->
+                        </div>
+                        <!-- End Front-end -->
+
+                        <!-- Back-end Tab Content -->
+                        <div class="jmf-tab-panel" id="Back-end-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Frontend</h4>
+                                    <ul class="lexend">
+                                        <li>Node.js, Express</li>
+
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            API/server, RESTful, modern JS
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Frontend</h4>
+                                    <ul class="lexend">
+                                        <li>MongoDB, Mongoose</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            NoSQL database with Node
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>JWT, Auth</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Authentication, Security
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:97%">97%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 1 -->
+
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Python (Django, Flask)</li>
+                                            </ul>
+
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Modern Python web API
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:90%">90%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>PHP (Laravel)</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Popular PHP framework (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:85%">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>Ruby on Rails</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Productive Ruby web framework (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:70%">70%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Frontend</h4>
+                                            <ul class="lexend">
+                                                <li>GraphQL</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    API query language (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:81%">81%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 6 -->
+
+                                    <!-- accordion content end -->
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
+
+                            </div>
+                            <!-- accordion end -->
+
+                        </div>
+                        <!-- End Back-end -->
+
+                        <!-- Database Tab Content -->
+                        <div class="jmf-tab-panel" id="Database-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Database</h4>
+                                    <ul class="lexend">
+                                        <li>MongoDB, Mongoose</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            NoSQL, documents
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Database</h4>
+                                    <ul class="lexend">
+
+                                        <li>PostgreSQL, MySQL</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            SQL, Relational DB
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:87%">87%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+
+
+                                    <!-- 1 -->
+
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Database</h4>
+                                            <ul class="lexend">
+                                                <li>Firebase Firestore</li>
+                                            </ul>
+
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Realtime NoSQL DB (React Native)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:95%">95%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Database</h4>
+                                            <ul class="lexend">
+                                                <li>SQLite</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Mobile local DB
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:85%">85%</div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
+                                    <!-- accordion content end -->
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
 
+                            </div>
+                            <!-- accordion end -->
+
+
+                        </div>
+                        <!-- End Database -->
+
+                        <!-- Version Control Tab Content -->
+                        <div class="jmf-tab-panel" id="Versions1-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Version Control</h4>
+                                    <ul class="lexend">
+                                        <li>Git, GitHub</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Standard, collaboration
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:98%">98%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Version Control</h4>
+                                    <ul class="lexend">
+                                        <li>Bitbucket</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Alternative Git platform (few knowledge)
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:45%">45%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- End Version Control -->
+
+                        <!-- DevOps/Deploy Tab Content -->
+                        <div class="jmf-tab-panel" id="DevOps/Deploy-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">DevOps/Deploy</h4>
+                                    <ul class="lexend">
+                                        <li>Netlify, Vercel</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Modern static deploy
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">DevOps/Deploy</h4>
+                                    <ul class="lexend">
+                                        <li>Heroku</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Easy backend deployment
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:92%">92%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">DevOps/Deploy</h4>
+                                            <ul class="lexend">
+                                                <li>Docker</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Containers (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:30%">30%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 1 -->
+
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">DevOps/Deploy</h4>
+                                            <ul class="lexend">
+                                                <li>Azure, GCP
+                                                </li>
+                                            </ul>
+
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Cloud deployment (few knowledge)
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:65%">65%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- accordion content end -->
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
+
+                            </div>
+                            <!-- accordion end -->
+                        </div>
+                        <!-- End DevOps/Deploy -->
+
+                        <!-- Testing Tab Content -->
+                        <div class="jmf-tab-panel" id="Testing-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Testing</h4>
+                                    <ul class="lexend">
+                                        <li>Jest</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                            </div>
+                                            Unit & integration testing
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:91%">91%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Testing</h4>
+                                    <ul class="lexend">
+                                        <li>Mocha/Chai</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Node.js testing
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Testing</h4>
+                                            <ul class="lexend">
+                                                <li>Cypress</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    End-to-end browser tests
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:50%">50%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- testing end -->
+                        <!-- Soft skill begin -->
+
+                        <div class="jmf-tab-panel" id="totd-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Soft skill</h4>
+                                    <ul class="lexend">
+                                        <li>Communication</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                            </div>
+                                            Remote/team/clients
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:99%">99%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Soft Skills</h4>
+                                    <ul class="lexend">
+                                        <li>Time Management</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Project delivery, deadlines
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:99%">99%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion -->
+                            <div class="jmf-skill-accordion">
+                                <button class="jmf-skill-accordion-btn" type="button">
+                                    See More <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="jmf-skill-accordion-content">
+                                    <div class="jmf-skill-table-container">
+                                        <div class="project-tagm">
+                                            <h4 class="anton-sc-regular">Soft Skills</h4>
+                                            <ul class="lexend">
+                                                <li>Project delivery, deadlines</li>
+                                            </ul>
+                                            <div class="jmf-skills-detail">
+                                                <span class="jmf-skills-tip lexend">
+                                                    <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                                    </div>
+                                                    Troubleshooting/debugging
+                                                </span>
+                                            </div>
+                                            <div class="strength-barm-cn lexend">
+                                                <p class="str-div">Strength</p>
+                                                <div class="strength-barm" style="--strength:99%">99%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="jmf-skill-accordion-close" type="button">See Less</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- softskill end  -->
+                        <!-- bonus begin -->
+                        <div class="jmf-tab-panel" id="Bonus2-panel" style="display:none;">
+                            <!-- content -->
+                            <!-- first -->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Bonus</h4>
+                                    <ul class="lexend">
+                                        <li>Figma</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note
+                                            </div>
+                                            UI/UX prototyping
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">95%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- first 2-->
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Bonus</h4>
+                                    <ul class="lexend">
+                                        <li>Premiere pro</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Video editing/production
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">90%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 3 -->
+
+                            <div class="jmf-skill-table-container">
+                                <div class="project-tagm">
+                                    <h4 class="anton-sc-regular">Bonus</h4>
+                                    <ul class="lexend">
+                                        <li>Webpack</li>
+                                    </ul>
+                                    <div class="jmf-skills-detail">
+                                        <span class="jmf-skills-tip lexend">
+                                            <div class="linem"><i class="fas fa-info-circle"></i> Details/Note</div>
+                                            Bundler
+                                        </span>
+                                    </div>
+                                    <div class="strength-barm-cn lexend">
+                                        <p class="str-div">Strength</p>
+                                        <div class="strength-barm" style="--strength:95%">80%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- bonus end -->
+                    </div>
+                </section>
+                <!-- pfm -->
+                <h2 class="anton-sc-regular pfm-header">Portfolio</h2>
+                <div id="portfo"></div>
+                <div class="portfolio-mobile " id="portfolio-section ">
+
+                    <!-- Tag Slider -->
+                    <div class="tag-slider" id="tag-slider">
+                        <!-- JS fills in tags here -->
+                    </div>
+                    <!-- Portfolio Grid -->
+                    <div class="portfolio-grid1" id="portfolio-grid">
+                        <!-- JS fills in items here -->
+                    </div>
+                </div>
+
+                <!-- ctm -->
+                <div id="contactm"></div>
+                <section id="contact">
+                    <section class="contact-section lexend" id="contact">
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <h2 class="contact-title">
+                                    <span class="contact-title-bold">GET</span>
+                                    <span class="contact-title-dot">●</span>
+                                    <span class="contact-title-plain">IN</span>
+                                    <span class="contact-title-accent">TOUCH</span>
+                                </h2>
+                                <p class="contact-desc">
+                                    Please fill out the form on this section to contact with me. Or call between 9:00
+                                    a.m. and
+                                    8:00 p.m. ET, Monday through Friday
+                                </p>
+                                <ul class="contact-details">
+                                    <li><a href="https://maps.app.goo.gl/438MkeyxzK2X9EAi9" target="_blank"
+                                            aria-label="Address">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </a><strong>Address:</strong> Wiesbaden Germany</li>
+                                    <li><a href="mailto:foday@jamesfoday.com" aria-label="Email"> <i
+                                                class="fas fa-envelope"></i></a><strong>Email:</strong>
+                                        foday@jamesfoday.com
+                                    </li>
+                                    <li><a href="tel:+1234567890" aria-label="Phone">
+                                            <i class="fas fa-phone"></i>
+                                        </a><strong>Phone:</strong> +49 160 924 79881</li>
+                                    <li><a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                                            <i class="fab fa-github"></i>
+                                        </a><strong>GitHub:</strong> github.com/jamesfoday
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/in/yourusername" target="_blank"
+                                            aria-label="LinkedIn">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>Linkedin:</strong> @JamesFoday</li>
+
+                                </ul>
+                            </div>
+                            <div class="contact-form-wrapper">
+                                <!-- Mailchimp Form Begins -->
+                                <div id="mc_embed_signup">
+                                    <form
+                                        action="https://paralleladdictionz.us16.list-manage.com/subscribe/post?u=8d5dfcad7451ae12d7a269d93&amp;id=49914c2425&amp;f_id=009c18e1f0"
+                                        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                        class="validate contact-form" target="_blank">
+                                        <input type="text" name="FNAME" class="form-input" id="mce-FNAME"
+                                            placeholder="Name">
+                                        <input type="email" name="EMAIL" class="form-input" id="mce-EMAIL"
+                                            placeholder="Email" required>
+                                        <textarea name="MMERGE7" class="form-input" id="mce-MMERGE7"
+                                            placeholder="Message" rows="4"></textarea>
+                                        <button type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                            class="contact-btn">Send Message</button>
+                                    </form>
+                                </div>
+                                <!-- Mailchimp Form Ends -->
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+
+            </div>
+        </div>
     </main>
-    <footer class="footer-wave">
+
+
+
+    <footer class="footer-wave hide-mobile">
         <div class="footer-content">
             <div class="footer-brand">James Foday</div>
             <div class="footer-socials">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#mailto:youremail@example.com"><i class="fab fa-envelop"></i></a>
+                <a href="https://github.com/jamesfoday"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/james-foday-a06083179/"><i class="fab fa-linkedin"></i></a>
+
             </div>
             <div class="footer-copyright">
                 &copy; COPYRIGHT 2024 BY JamesFoday
@@ -270,7 +1712,51 @@
 
     </footer>
 
+    <!-- footer mobile -->
+
+    <!-- pfm -->
+
+    <footer class="footer-menu lexend">
+        <a href="#aboutm" class="footer-link">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+        </a>
+        <a href="#portfo" class="footer-link">
+            <i class="fas fa-briefcase"></i>
+            <span>Portfolio</span>
+        </a>
+        <a href="#homem" class="footer-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#contactm" class="footer-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </footer>
+
+
+    <!-- Modal -->
+
+    <div id="cv-modal" class="cv-modal">
+        <div class="cv-modal-content">
+            <button class="cv-modal-close" id="cv-modal-close">&times;</button>
+            <h2>My CV</h2>
+            <!-- Example: Embed a PDF, or show a download link, or preview -->
+
+            <iframe src="img/JamesFodayResume.pdf" width="100%" height="700px" style="border:none;">
+                This browser does not support PDFs. Please <a href="img/JamesFodayResume.pdf">download the PDF</a>.
+            </iframe>
+
+
+            <a href="/img/JamesFodayResume.pdf" download class="cv-download-btn">Download PDF</a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
+
+
 
 </body>
 
