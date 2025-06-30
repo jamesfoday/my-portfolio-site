@@ -2195,7 +2195,7 @@ html {
 }
 
 /* Only show on mobile (optional, hide on wider screens) */
-@media (min-width: 700px) {
+@media (min-width: 1150px) {
 
     .jmf-mobile-profile {
         display: none;

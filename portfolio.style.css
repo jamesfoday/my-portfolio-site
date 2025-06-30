@@ -946,7 +946,7 @@ body {
     color: #2a2a2a;
 }
 
-/* .cv-download-btn {
+.cv-download-btn {
     display: inline-block;
     margin-top: 1.2em;
     background: #56880b;
@@ -959,7 +959,7 @@ body {
 
 .cv-download-btn:hover {
     background: #395312;
-} */
+}
 
 @media (max-width: 600px) {
     .cv-modal-content {
@@ -1550,4 +1550,13 @@ body {
 
 .footer-socials a:hover {
     color: #d4fd3fa6;
+}
+
+/* cv download  */
+.dcv {
+    display: inline;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #047922;
+
 }
