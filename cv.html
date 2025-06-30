@@ -8,6 +8,8 @@
     <style>
         html,
         body {
+            overflow-x: hidden;
+
             height: 100%;
             margin: 0;
             padding-left: 12px;
@@ -75,16 +77,21 @@
         }
 
         .cv-frame {
-            width: 100%;
-            overflow: hidden;
-            height: 100%;
-            min-height: 0;
-            flex: 1 1 auto;
             border: none;
-            background: #f6f6f6;
-            border-radius: 12px;
-            /* Make iframe fill the available vertical space */
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 0;
+            height: calc(100vh - 62px);
+            /* sticky footer */
             display: block;
+            background: #f6f6f6;
+            overflow-x: hidden;
+        }
+
+        .cv-viewport {
+            width: 100vw;
+            max-width: 100vw;
+            overflow-x: hidden;
         }
 
         /* Sticky Button Bar */
@@ -162,11 +169,14 @@
             My Curriculum Vitae (CV)</div> -->
         <div class="cv-frame-wrap" style="flex:1; width:100%; height:100%;">
             <!-- Make the PDF iframe fill vertical space and scroll if needed -->
-            <iframe src="img/jamesf.pdf" class="cv-frame" title="James Foday CV"
-                style="height: 100%; width: 100%; overflow: hidden;">
-                This browser does not support PDFs. Please
-                <a href="img//jamesf.pdf" download>download the PDF</a>.
-            </iframe>
+            <div class="cv-viewport">
+                <iframe src="img/jamesf.pdf" class="cv-frame" title="James Foday CV"
+                    style="height: 100%; width: 100%; overflow: hidden;">
+                    This browser does not support PDFs. Please
+                    <a href="img//jamesf.pdf" download>download the PDF</a>.
+                </iframe>
+            </div>
+
         </div>
     </div>
     <!-- Sticky Button Bar -->
