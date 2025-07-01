@@ -245,7 +245,7 @@ body {
     background: #fff;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 1279px) {
     .hero {
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -306,13 +306,39 @@ body {
 }
 
 
-@media (min-width: 541px) and (max-width: 992px) {
+@media (min-width: 541px) and (max-width: 1279px) {
     .hero {
         flex-direction: column-reverse;
         align-items: flex-start;
         justify-content: flex-end;
         padding-top: var(--header-height);
         padding-bottom: 2rem;
+    }
+
+    .jmf-skill-table-container {
+        background: #ffffff;
+        border: #02ff84 solid 1px;
+        border-radius: 13px;
+        padding: 1.3rem 0.5rem 1.2rem 0.5rem;
+        box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+        margin-top: 8px;
+        width: 500px !important;
+
+    }
+
+    .jmf-skills-card {
+        width: 100%;
+        box-sizing: border-box;
+        background: #fafafa !important;
+        border-radius: 18px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        padding: 15px;
+        margin: 12px;
+    }
+
+
+    .contact-title {
+        font-size: 15px !important;
     }
 
     .hero-img {
@@ -366,6 +392,27 @@ body {
     }
 }
 
+
+/* @media (min-width: 900px) {
+    .jmf-skill-table {
+        min-width: 380px;
+       
+        font-size: 0.97rem;
+    }
+
+
+    .jmf-skill-table-container {
+        padding-left: 17px;
+        padding-right: 17px;
+        width: 500px !important;
+    }
+
+    .jmf-skill-table thead tr th,
+    .jmf-skill-table tbody tr td {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+} */
 
 
 /* preloader */
@@ -648,7 +695,7 @@ html {
 
     z-index: 2;
     min-width: 400px;
-    max-width: 340px;
+    max-width: 100%;
     height: 160px;
     display: flex;
     flex-direction: column;
@@ -723,6 +770,21 @@ html {
 
 
 
+}
+
+@media (min-width: 800px) and (max-width: 1350px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .portfolio-info {
+
+        width: 100%;
+        /* border-radius: 1.3rem; */
+        margin: 0;
+
+    }
 }
 
 @media (max-width: 700px) {
@@ -1988,10 +2050,15 @@ html {
 }
 
 /* Hide footer menu on screens wider than 768px (desktop and up) */
-@media (min-width: 900px) {
+@media (min-width: 1279px) {
     .footer-menu {
         display: none;
     }
+
+}
+
+@media (min-width: 900px) {
+
 
     .project-tags {
         margin-bottom: 0.6rem;
@@ -2185,9 +2252,10 @@ html {
     min-height: 120px;
     background: #ffffff8a;
     border-radius: 10px;
-    display: block;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    align-content: center !important;
 
     color: #111;
     /* margin-bottom: 12px; */
@@ -2200,6 +2268,7 @@ html {
     .jmf-mobile-profile {
         display: none;
     }
+
 }
 
 /* skills table mobile */
@@ -2211,8 +2280,42 @@ html {
     padding: 1.3rem 0.5rem 1.2rem 0.5rem;
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
     margin-top: 8px;
-
+    width: auto !important;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+@media (min-width: 768px) {
+    .jmf-skill-table-container {
+        width: 500px !important;
+    }
+
+    .portfolio-mobile {
+        width: 100% !important;
+
+    }
+
+    .portfolio-grid1 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .jmf-abt-txt {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* .jmf-skill-table-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+} */
 
 .jmf-skill-table {
     width: 100%;
@@ -2274,12 +2377,7 @@ html {
 }
 
 
-.jmf-skill-table-container {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    box-sizing: border-box;
-}
+
 
 /* Make table fit parent */
 .jmf-skill-table {
@@ -2442,6 +2540,9 @@ html {
     padding: .75rem 1rem 0.25rem 1rem;
     margin-bottom: 0.50rem;
     color: #047922;
+    width: 100%;
+    /* align-items: center !important;
+    justify-content: center !important; */
 }
 
 .tag-btn {
@@ -2473,7 +2574,7 @@ html {
 
 @media (min-width: 600px) {
     .portfolio-mobile {
-        max-width: 500px;
+        width: 100%;
     }
 
     .portfolio-grid1 {
@@ -2528,10 +2629,12 @@ html {
     margin-bottom: .13rem;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1279px) {
     .search-bar-container {
         display: none !important;
     }
+
+
 }
 
 .cv-modal {
