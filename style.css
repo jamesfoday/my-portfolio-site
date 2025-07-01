@@ -14,7 +14,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    background: var(--primary);
+    background: transparent;
     color: var(--accent);
 }
 
@@ -40,7 +40,7 @@ body {
 
 .site-header.scrolled .logo,
 .site-header.scrolled .desktop-nav a {
-    color: #181818;
+    color: #03972f;
     /* Make logo/menu dark on white bg */
 }
 
@@ -390,7 +390,27 @@ body {
     .hide-mobile {
         display: none !important;
     }
+
+
+    .profile-pic-wrap-opener {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+        background: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 6px 42px 0 rgba(0, 0, 0, 0.11);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-pic-wrap-opener img {
+        width: 110px !important;
+        height: 110px;
+    }
 }
+
 
 
 /* @media (min-width: 900px) {
@@ -419,12 +439,12 @@ body {
 #preloader {
     position: fixed;
     inset: 0;
-    background: #181818;
+    background: transparent;
     z-index: 99999;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.7s;
+    transition: opacity 0.4s;
 }
 
 .book {
@@ -649,8 +669,9 @@ html {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 36px;
-    padding-left: 140px;
+    padding-left: 60px;
     padding-right: 140px;
+    width: 100% !important;
 }
 
 .portfolio-card {
@@ -685,17 +706,17 @@ html {
 
 .portfolio-info {
     position: absolute;
-    padding-left: 10px;
-    padding-right: 10px;
 
-    margin-right: 15px;
+
+
+
     background: #ffffff;
     padding: 12px;
     border-top: #00b41e solid 2px;
 
+
     z-index: 2;
-    min-width: 400px;
-    max-width: 100%;
+    width: 380px !important;
     height: 160px;
     display: flex;
     flex-direction: column;
@@ -776,7 +797,11 @@ html {
     .portfolio-grid {
         grid-template-columns: 1fr 1fr;
         width: 100%;
+        padding-left: 140px;
+        padding-right: 140px;
     }
+
+
 
     .portfolio-info {
 
@@ -847,7 +872,7 @@ html {
     flex-wrap: wrap;
     box-sizing: border-box;
     background: rgb(255, 255, 255);
-    padding: 50px;
+    padding: 40px !important;
     border-radius: 20px;
 }
 
@@ -1378,6 +1403,19 @@ html {
     height: 210px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.profile-pic-wrap-opener {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 6px 42px 0 rgba(0, 0, 0, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-left h2 {
@@ -1975,7 +2013,8 @@ html {
 .inline-list {
     list-style: none;
     padding: 10px;
-    margin: 0;
+    margin: 1px;
+
 
 
 }
@@ -1989,7 +2028,7 @@ html {
     color: rgb(138, 248, 138);
     font-weight: 500;
     font-size: 0.98rem;
-    width: 150px !important;
+
 }
 
 /* mobile footer */
@@ -2308,6 +2347,27 @@ html {
         align-items: center;
         justify-content: center;
     }
+
+    .jmf-about-card {
+        background: #fafafa !important;
+        border-radius: 18px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        padding: 50px;
+        margin: 50px !important;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .jmf-skills-card {
+        width: auto;
+        box-sizing: border-box;
+        background: #fafafa !important;
+        border-radius: 18px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        padding: 15px !important;
+        margin: 50px !important;
+
+    }
 }
 
 /* .jmf-skill-table-container {
@@ -2502,8 +2562,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 10px;
 }
+
+
 
 #search-bar {
     width: 50%;
@@ -2769,4 +2831,34 @@ html {
 
 .my-popup-btn:hover {
     background: #249b6d;
+}
+
+/* share  */
+.footer-sticky-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 8px;
+    transition: color 0.16s;
+}
+
+.footer-sticky-link i {
+    font-size: 20px;
+    margin-bottom: 0.05em;
+    color: #0da039;
+}
+
+.footer-sticky-link:hover,
+.footer-sticky-link:focus {
+    color: #30b583;
 }

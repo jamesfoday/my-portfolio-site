@@ -25,11 +25,14 @@
         <div class="book">
             <div class="page left"></div>
             <div class="page right"></div>
-            <div class="book-logo">Foday</div>
+            <div class="book-logo anton-sc-regular">
+                <div class="profile-pic-wrap-opener"><img src="img/homepic .png" alt="James Foday portrait"
+                        class="profile-pic" /></div>
+            </div>
         </div>
     </div>
     <header class="site-header">
-        <div class="logo">Foday</div>
+        <div class="logo anton-sc-regular">Foday</div>
         <nav class="desktop-nav">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -478,7 +481,7 @@
             </section>
 
         </section>
-        <section class="hide-mobile" id="portfolio">
+        <section class="hide-mobile portfolio-section" id="portfolio">
             <section class="portfolio-section" id="portfolio1">
                 <h2 class="anton-sc-regular">Portfolio</h2>
                 <div class="portfolio-grid">
@@ -717,13 +720,17 @@
         <!-- pfm -->
         <!-- Top: Search Bar -->
         <div id="homem"></div>
+
         <div class="search-bar-container" id="portfolio-sectionh">
+            <div class="anton-sc-regular logomb">Foday</div>
             <input type="text" id="search-bar" placeholder="Search portfolio..." autocomplete="off" />
             <div id="autocomplete"></div>
-
-
-
+            <button id="footer-share-btn" class="footer-link">
+                <i class="fas fa-share-alt"></i>
+                <span>Share</span>
+            </button>
         </div>
+
 
         <div class="about-mobile" id="aboutm">
 
@@ -1681,8 +1688,9 @@
         <div class="footer-content">
             <div class="footer-brand">James Foday</div>
             <div class="footer-socials">
-                <a href="https://github.com/jamesfoday"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/james-foday-a06083179/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jamesfoday " target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/james-foday-a06083179/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
 
             </div>
             <div class="footer-copyright">
@@ -1741,7 +1749,19 @@
     </div>
 
     <script src="script.js"></script>
-
+    <script>
+        document.getElementById('footer-share-btn').onclick = function () {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: "Check out this portfolio!",
+                    url: window.location.href
+                });
+            } else {
+                alert("Sharing is not supported on this browser.");
+            }
+        };
+    </script>
 
 
 

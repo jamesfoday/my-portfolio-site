@@ -329,6 +329,10 @@ body {
         margin: 70px;
     }
 
+    .search-bar-container {
+        gap: 70px !important;
+    }
+
 
 }
 
@@ -592,38 +596,43 @@ body {
 .home-sticky-btn {
     position: fixed;
     top: 24px;
-    right: 90% !important;
+    right: 92% !important;
     z-index: 1999;
-    background: #fff;
+    background: none;
     color: #27b177;
     border-radius: 50%;
-    box-shadow: 0 4px 24px rgba(44, 108, 83, 0.13);
+
     width: 53px;
     height: 53px;
-    display: inline;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2.1rem;
-    transition: background 0.18s, color 0.13s, box-shadow 0.2s;
+
     border: none;
     outline: none;
     cursor: pointer;
     text-decoration: none;
+    gap: 20px;
 
 }
 
 .home-sticky-btn i {
     display: flex;
-    font-size: 35px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
-    padding-top: 6px;
-    padding-bottom: 7px;
+    padding: 15px;
+    background: #e2ece9b0;
+    border-radius: 50%;
+    border: #03d437 solid 2px;
+    transition: background 0.18s, color 0.13s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(44, 108, 83, 0.13);
 }
 
 .home-sticky-btn span {
     display: flex;
-    font-size: 14px;
+    font-size: 35px;
     align-items: center;
     justify-content: center;
     padding-top: 3px;
@@ -631,9 +640,9 @@ body {
 
 .home-sticky-btn:hover,
 .home-sticky-btn:focus {
-    background: #30b583;
-    color: #fff;
-    box-shadow: 0 8px 34px rgba(44, 108, 83, 0.21);
+
+    color: #000000;
+
 }
 
 @media (max-width: 1279px) {
@@ -642,10 +651,31 @@ body {
         right: 10px;
         width: 42px;
         height: 42px;
-        font-size: 1.35rem;
+        font-size: 1.3em;
         display: none;
     }
 }
+
+@media (min-width: 800px) and (max-width: 1450px) {
+    .home-sticky-btn {
+        font-size: 10px !important;
+        right: 90% !important;
+        padding-right: 20px;
+    }
+
+    .home-sticky-btn i {
+        font-size: 15px !important;
+    }
+
+    .home-sticky-btn span {
+
+        font-size: 15px !important;
+
+
+    }
+}
+
+
 
 
 
@@ -1098,7 +1128,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 #search-bar {
@@ -1572,4 +1602,9 @@ body {
     justify-content: center !important;
     color: #047922;
 
+}
+
+.logomb {
+    color: #047922 !important;
+    text-decoration: none !important;
 }
