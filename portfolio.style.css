@@ -337,6 +337,29 @@ body {
 }
 
 
+@media (min-width: 340px) {
+
+    .portfolio-card {
+        padding: 12px !important;
+
+    }
+
+    .portfolio-main {
+        padding: 28px !important;
+    }
+
+    .portfolio-mobile {
+        padding: 25px !important;
+    }
+
+
+
+
+
+}
+
+
+
 .portfolio-sidebar {
     width: var(--sidebar-width);
     min-width: 200px;
@@ -1607,4 +1630,15 @@ body {
 .logomb {
     color: #047922 !important;
     text-decoration: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

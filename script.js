@@ -284,7 +284,7 @@ searchBar.addEventListener('input', function () {
 
                     // Scroll to portfolio section after short delay (let rendering happen)
                     setTimeout(() => {
-                        const target = document.getElementById('portfolio-section');
+                        const target = document.getElementById('portfolio-section1');
                         if (target) {
                             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }

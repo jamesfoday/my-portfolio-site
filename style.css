@@ -640,7 +640,7 @@ html {
 }
 
 .portfolio-section {
-    padding: 80px 4vw 40px 4vw;
+    padding: 60px 4vw 40px 4vw;
     max-width: 100%;
     margin: 0 auto;
     background: #e5f8ef;
@@ -716,8 +716,8 @@ html {
 
 
     z-index: 2;
-    width: 380px !important;
-    height: 160px;
+    width: 100% !important;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
@@ -854,7 +854,7 @@ html {
 
 
 .contact-section {
-    padding: 80px 4vw 80px 4vw;
+    padding: 150px;
     background: #e5f8ef;
     color: #222;
     width: auto;
@@ -866,13 +866,13 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    max-width: auto;
-
+    /* gap: 64px; */
+    max-width: 1200px;
+    margin: 0 auto;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background: rgb(255, 255, 255);
-    padding: 40px !important;
+    background: #ffffff;
+    padding: 60px;
     border-radius: 20px;
 }
 
@@ -1001,10 +1001,14 @@ html {
 }
 
 /* Responsive */
-@media (max-width: 950px) {
+@media (max-width: 1300px) {
     .contact-container {
         flex-direction: column;
         gap: 36px;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px !important;
+        padding: 1px;
     }
 
 
@@ -1041,9 +1045,9 @@ html {
     min-width: 0;
     margin: 0 auto;
     padding: 1.5rem 1rem;
-
+    background: transparent;
     border-radius: 20px;
-
+    box-shadow: none;
     box-sizing: border-box;
 }
 
@@ -2014,6 +2018,7 @@ html {
     list-style: none;
     padding: 10px;
     margin: 1px;
+    width: 100%;
 
 
 
@@ -2861,4 +2866,15 @@ html {
 .footer-sticky-link:hover,
 .footer-sticky-link:focus {
     color: #30b583;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
