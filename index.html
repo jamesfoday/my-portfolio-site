@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Foday | Web & Mobile App Developer</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <!-- <link rel="icon" type="image/png" href="img/logo.png"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e5f8ef">
 
 
 
@@ -26,7 +29,7 @@
             <div class="page left"></div>
             <div class="page right"></div>
             <div class="book-logo anton-sc-regular">
-                <div class="profile-pic-wrap-opener"><img src="img/homepic .png" alt="James Foday portrait"
+                <div class="profile-pic-wrap-opener"><img src="img/homepic.png" alt="James Foday portrait"
                         class="profile-pic" /></div>
             </div>
         </div>
@@ -54,7 +57,7 @@
                 </p>
             </div>
             <div class="hero-img">
-                <img src="img/homepic .png" alt="James Foday portrait" />
+                <img src="img/homepic.png" alt="James Foday portrait" />
             </div>
         </section>
         <section class="hide-mobile" id="about">
@@ -63,18 +66,18 @@
                 <section class="about-skills-section">
                     <div class="about-left lexend">
                         <div class="profile-pic-wrap">
-                            <img src="img/homepic .png" alt="James Foday" class="profile-pic" />
+                            <img src="img/homepic.png" alt="James Foday" class="profile-pic" />
                         </div>
                         <h2>Skills</h2>
-                        <div class="skills-tabs lexend">
-                            <button class="tab-btn active" data-tab="frontend">Front-end</button>
-                            <button class="tab-btn" data-tab="backend">Back-end</button>
-                            <button class="tab-btn" data-tab="database">Database</button>
-                            <button class="tab-btn" data-tab="version">Version Control</button>
-                            <button class="tab-btn" data-tab="devops">DevOps/Deploy</button>
-                            <button class="tab-btn" data-tab="testing">Testing</button>
-                            <button class="tab-btn" data-tab="softskills">Soft Skills</button>
-                            <button class="tab-btn" data-tab="bonus">Bonus</button>
+                        <div class="skills-tabs  ">
+                            <button class="tab-btn active lexend" data-tab="frontend">Front-end</button>
+                            <button class="tab-btn lexend" data-tab="backend">Back-end</button>
+                            <button class="tab-btn lexend" data-tab="database">Database</button>
+                            <button class="tab-btn lexend" data-tab="version">Version Control</button>
+                            <button class="tab-btn lexend" data-tab="devops">DevOps/Deploy</button>
+                            <button class="tab-btn lexend" data-tab="testing">Testing</button>
+                            <button class="tab-btn lexend" data-tab="softskills">Soft Skills</button>
+                            <button class="tab-btn lexend" data-tab="bonus">Bonus</button>
 
                         </div>
                         <div class="line lexend"></div>
@@ -487,7 +490,7 @@
                 <div class="portfolio-grid">
                     <!-- Portfolio Item 1 -->
                     <div class="portfolio-card">
-                        <a href="angular-client.html" class="portfolio-title-main">
+                        <a href="angulat-client.html" class="portfolio-title-main">
                             <img src="img/p1.png" alt="angular-client App" />
                             <span class="sr-only">X-direct Mobile App project details</span>
                         </a>
@@ -758,7 +761,7 @@
                 <!-- About Card -->
                 <section class="jmf-about-card">
                     <div class="jmf-abt-txt">
-                        <div class="jmf-profile-pic-wrap"> <img src="img/homepic .png" alt="James Foday"
+                        <div class="jmf-profile-pic-wrap"> <img src="img/homepic.png" alt="James Foday"
                                 class="jmf-profile-pic" /> </div>
                         <h2 class="jmf-about-title anton-sc-regular">ABOUT <span class="jmf-highlight">ME</span> <br>
                             <div class="jmf-name">James Foday</div>
@@ -1796,6 +1799,10 @@
 
     <script src="script.js"></script>
     <script>
+
+        /**
+ * Handles the share button functionality using the Web Share API.
+ */
         document.getElementById('footer-share-btn').onclick = function () {
             if (navigator.share) {
                 navigator.share({
@@ -1809,6 +1816,11 @@
         };
     </script>
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
+    </script>
 
 
 </body>

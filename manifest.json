@@ -1,0 +1,35 @@
+{
+    "name": "James Foday Portfolio",
+    "short_name": "JF Portfolio",
+    "description": "Personal portfolio website of James Foday.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#181818",
+    "theme_color": "#e5f8ef",
+    "icons": [
+        {
+            "src": "img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "img/screenshot.png",
+            "sizes": "540x720",
+            "type": "image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "img/screenshot-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        }
+    ]
+}
